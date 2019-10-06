@@ -1,0 +1,358 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements
+\usepackage{gensymb}
+\usepackage{{mathtools}}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Determination of Gravitational Acceleration \\ PHYS 151L} % Title
+
+\author{Wyatt \textsc{Hoodes}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Date Performed: & September 30, 2019 \\ % Date the experiment was performed
+Partners: & Rudy \\ % Partner names
+% Instructor: & Professor Smith % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Objective}
+
+Experimentally approximate the value for gravitational acceleration near sea level.  Sub-objective:
+Observe the approximate limit for usable accuracy with the small angle approximation.
+
+% (as defined in \ref{definitions}):
+
+% \begin{center}\ce{2 Mg + O2 -> 2 MgO}\end{center}
+
+% If you have more than one objective, uncomment the below:
+%\begin{description}
+%\item[First Objective] \hfill \\
+%Objective 1 text
+%\item[Second Objective] \hfill \\
+%Objective 2 text
+%\end{description}
+
+% The below is used as a defintions section.
+
+% \subsection{Definitions}
+% \label{definitions}
+% \begin{description}
+% \item[Stoichiometry]
+% The relationship between the relative quantities of substances taking part in a reaction or forming a compound, typically a ratio of whole integers.
+% \item[Atomic mass]
+% The mass of an atom of a chemical element expressed in atomic mass units. It is approximately equivalent to the number of protons and neutrons in the atom (the mass number) or to the average number allowing for the relative abundances of different isotopes.
+% \end{description}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+
+\section{Theory}
+
+The force that causes a pendulum to swing is the force that is perpindicular to the arc path.\\
+
+\begin{center}
+  {$ \vec{F} = ma = mg \sin \theta$}\\
+\end{center}
+
+Where $a$ is the acceleration, $m$ is the mass, and $g$ is the acceleration due to gravity.
+$\theta$ is the angle formed between the rest position of the object and the pendulum string.\\
+
+Using the small angle approximation, {$\sin \theta \approx \theta$}, so $\vec{F}$ can be written as:\\
+
+\begin{center}
+  {$ \vec{F} = ma = mg\theta$}\\
+\end{center}
+
+By representing harmonic oscillation as:\\
+
+\begin{center}
+  {$\omega = \sqrt{\frac{g}{l}}$}, and angular frequency as: {$ \omega = \frac{2\pi}{T}$}
+\end{center}
+
+Where $l$ is the length of the pendulum, and $T$ is the period.  Then the period can be written as:\\
+
+\begin{center}
+  {$T = 2 \pi \sqrt{\frac{l}{g}}$}\\
+\end{center}
+
+The linearization of the equation results in:\\
+
+\begin{center}
+  {$T^2 = \frac{4 \pi^2}{g} \cdot l$}
+\end{center}
+
+Therefore the linearization of the equation should result in a slope with the from $\frac{4 \pi^2}{g}$,
+thus allowing us to solve for $g$.\\
+
+As for observing the limit for accuracy using the small angle approximation,  the data from the degree
+section (see \textit{Procedure}) of the experiment was determined to signify this cutoff limit.
+
+% \begin{tabular}{ll}
+% Mass of empty crucible & \SI{7.28}{\gram}\\
+% Mass of crucible and magnesium before heating & \SI{8.59}{\gram}\\
+% Mass of crucible and magnesium oxide after heating & \SI{9.46}{\gram}\\
+% Balance used & \#4\\
+% Magnesium from sample bottle & \#1
+% \end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+
+\section{Procedure}
+
+A pendulum device was acquired, along with a meter stick.  A Galaxy s7 Edge was used as
+a stand-in stopwatch.  The pendulm consisted of a string held in place via a pin, imposed
+on a semi-circularly shaped degree measuring placard with the $0^{\circ}$ mark parallel to
+the pendulum at rest when calibrated. On the left and right sides of the placard, degrees extended $90^{\circ}$
+along the arc of the placard.  Thus making it possible to measure the $\theta$ value, as mentioned
+in the \textit{Theory} section.\\
+
+Three different sets, consisting of a variable number of sub-series, with 5 trials for each
+sub-series were conducted during the experiment.  Each trial timed five periods, divided 
+the resulting value by five, thus producing the time for a single period.  This was done to 
+reduce observational error and improve accuracy:\\
+
+The first set tested 3 different masses: Lead (Pb), Aluminum (Al), and Iron (Fe).  The length
+of the pendulum string was 58.3 cm, and the angle for each trial was constant at $20.0^{\circ}$.\\
+
+The second set tested 9 different angles.  Starting with $5^{\circ}$ and incrementing up $5^{\circ}$
+for each succesive trial.  Finally ending on $45^{\circ}$.\\
+
+The third and final set tested 6 different pendulum string lengths. Beginning with 20 cm, each
+successive trial incremented string length by 10 cm, ending with a final trial testing a string
+length of 70 cm.\\
+
+The Average period, standard deviation, and standard deviation from the mean were all dervied
+via a Python script.
+
+
+%----------------------------------------------------------------------------------------
+%	SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	SECTION
+%----------------------------------------------------------------------------------------
+\section{Data}
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Table of the period vs mass trials.}
+    \label{tab:table1}
+    \begin{tabular}{l|c|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Mass} & \textbf{Average period (s)} & \textbf{Std Dev} & \textbf{SDM}\\
+      \hline
+      $Al$ & 1.48 & 0.0148 & 0.00663\\
+      $Fe$ & 1.47 & 0.00447 & 0.00200\\
+      $Pb$ & 1.49 & 0.0120 & 0.00490\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table of the period vs degree trials.}
+    \label{tab:table1}
+    \begin{tabular}{l|c|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Angle} & \textbf{Average period (s)} & \textbf{Std Dev} & \textbf{SDM}\\
+      \hline
+      $5.0^{\circ}$ & 1.49 & 0.0111 & 0.00500\\
+      $10.0^{\circ}$ & 1.50 & 0.0162 & 0.00725\\
+      $15.0^{\circ}$ & 1.53 & 0.0258 & 0.0115\\
+      $20.0^{\circ}$ & 1.55 & 0.0205 & 0.00917\\
+      $25.0^{\circ}$ & 1.56 & 0.0277 & 0.0124\\
+      $30.0^{\circ}$ & 1.58 & 0.0147 & 0.00658\\
+      $35.0^{\circ}$ & 1.60 & 0.0251 & 0.0112\\
+      $40.0^{\circ}$ &1.63 & 0.0278 & 0.0124\\
+      $45.0^{\circ}$ & 1.66 & 0.0265 & 0.0118\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table of the period vs pendulum length trials.}
+    \label{tab:table1}
+    \begin{tabular}{l|c|c|r} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Length (cm)} & \textbf{Average period (s)} & \textbf{Std Dev} & \textbf{SDM}\\
+      \hline
+      $20$ & 0.740 & 0.0197 & 0.00882\\
+      $30$ & 1.16 & 0.0153 & 0.00684\\
+      $40$ & 1.52 & 0.0386 & 0.0172\\
+      $50$ & 1.96 & 0.0258 & 0.0115\\
+      $60$ & 2.38 & 0.0434 & 0.0194\\
+      $70$ & 2.74 & 0.0717 & 0.0321\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\clearpage
+\section{Graphical Analysis}
+
+All graphs were created via the following Python libraries:\\
+
+\textit{numpy, scipy, and MatPlotLib.}\\
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{mass.png}
+  \caption{The plot of the pendulum period vs mass. Exact masses were unknown, instead the graph
+  compares molar mass of each corresponding element to a given trial.  The slope of the linear fit
+  is practically zero, signifying period is constant relative to mass.}
+  \label{fig:group}
+\end{figure}
+
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{degree.png}
+  \caption{The plot of pendulum period vs angle offset. As the angle increases, there is a position
+  where the small angle approximation fails.}
+  \label{fig:class}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{length.png}
+  \caption{The plot of the square of the period time vs the length of the pendulum.  By utilizing
+  the slope of the linear regression, it is possible to derive a value for the gravitational constant,
+  $g$.}
+  \label{fig:both}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 6
+%----------------------------------------------------------------------------------------
+%
+% \begin{enumerate}
+% \begin{item}
+% The \emph{atomic weight of an element} is the relative weight of one of its atoms compared to C-12 with a weight of 12.0000000$\ldots$, hydrogen with a weight of 1.008, to oxygen with a weight of 16.00. Atomic weight is also the average weight of all the atoms of that element as they occur in nature.
+% \end{item}
+% \begin{item}
+% The \emph{units of atomic weight} are two-fold, with an identical numerical value. They are g/mole of atoms (or just g/mol) or amu/atom.
+% \end{item}
+% \begin{item}
+% \emph{Percentage discrepancy} between an accepted (literature) value and an experimental value is
+% \begin{equation*}
+% \frac{\mathrm{experimental\;result} - \mathrm{accepted\;result}}{\mathrm{accepted\;result}}
+% \end{equation*}
+% \end{item}
+% \end{enumerate}
+
+\clearpage
+\section{Results, Conclusion, and Error}
+
+From Figure 3, the regression from the plot yielded a slope of approximately $0.0402$.
+By our theory:\\
+
+\begin{center}
+  {$T^2 = \frac{4 \pi^2}{g} \cdot l$}
+\end{center}
+
+Unit-wise, this is: {$s^2 = \frac{cm \cdot s^2}{m}$}, to have $m$ instead of $cm$, divide by 100:\\
+
+\begin{center}
+  {$\frac{4\pi^{2}}{100g} = 0.0402$}\\
+  {$\frac{4\pi^{2}}{g} = 4.02$}\\
+  {$\frac{g}{4\pi^{2}} = \frac{1}{4.02}$}\\
+  {$g = \frac{4\pi^{2}}{4.02}$}\\
+\end{center}
+
+So the result for the constant $g$ resulted in:
+
+\begin{center}
+  {$g = 9.82 \frac{m}{s^{2}}$}\\
+\end{center}
+
+The error for this result is the propagation of the trials:\\
+
+{$\delta = \sqrt{0.0197^2 + 0.0153^2 + 0.0386^2 + 0.0258^2 + 0.0434^2 + 0.0717^2} = 0.0990$}\\
+
+The confidence is therfore:\\
+
+\begin{center}
+  {$\rho = |{\frac{0.0990}{9.82}}| \cdot 100\% = 1.01 \%$}
+\end{center}
+
+And the agreement:
+
+\begin{center}
+  {$s = |{\frac{9.82 - 9.81}{0.0990}}| = 0.101$}
+\end{center}
+
+Such confidence and agreement values indicate that the experiment was well conducted and that the
+experimental value derived for $g$ agrees well with the theoretical value of $9.81$.\\
+
+As for the small angle apprximation; According to the data visualized in the graph in Figure 2, the 
+small angle approximation appears to diverge between $\theta = 20^{\circ}$ and $\theta = 25^{\circ}$.\\
+
+Errors involved in the experiment include observational error of correctly timing a pendulum period;
+Instrumental, as the pendulm string appeared to snag the degree placard thus interfering with the period.
+The observational error was the largest, but was mitigated by measuring 5 periods of the pendulum for
+each trial.
+
+
+%----------------------------------------------------------------------------------------
+%	Appendix
+%----------------------------------------------------------------------------------------
+
+
+% \bibliographystyle{apalike}
+%
+% \bibliography{sample}
+
+%----------------------------------------------------------------------------------------
+
+
+\end{document}
