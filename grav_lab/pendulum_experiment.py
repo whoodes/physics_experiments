@@ -86,29 +86,30 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(xi, y)
 x = np.linspace(20, 225)  # span the graph
 y = slope * x + intercept
 plt.plot(x, y, label="Linear regression: y = %fx + %.2f" %
-    (slope, intercept,))
+         (slope, intercept,))
 
 # Plot the aluminum trials and the corresponding deviation.
 aluminum, = plt.plot([al] * N, mass_data['al'],
-                    'ro', markersize=4, 
-                    label="Aluminum (Al)")
+                     'ro', markersize=4,
+                     label="Aluminum (Al)")
 plt.errorbar([al] * N, mass_data['al'],
-            yerr=0.014832, fmt='|', capsize=3,
-            ecolor='red')
+             yerr=0.014832, fmt='|', capsize=3,
+             ecolor='red')
 
 # Plot the iron trials and the corresponding deviation.
 iron, = plt.plot([fe] * N, mass_data['fe'],
-                'bo', markersize=4,
-                label="Iron (Fe)")
+                 'bo', markersize=4,
+                 label="Iron (Fe)")
 plt.errorbar([fe] * N, mass_data['fe'],
-            yerr=0.004472, fmt='|', capsize=3,
-            ecolor='blue')
+             yerr=0.004472, fmt='|', capsize=3,
+             ecolor='blue')
 
 # Plot the plead trials and corresponding deviation.
-lead, = plt.plot([pb] * N, mass_data['pb'], 'go', markersize=4, label="Lead (Pb)")
+lead, = plt.plot([pb] * N, mass_data['pb'], 'go',
+                 markersize=4, label="Lead (Pb)")
 plt.errorbar([pb] * N, mass_data['pb'],
-            yerr=0.010954, fmt='|', capsize=3,
-            ecolor='blue')
+             yerr=0.010954, fmt='|', capsize=3,
+             ecolor='blue')
 plt.legend(handler_map={lead: HandlerLine2D(numpoints=1)})
 
 plt.title('Graph of the time to complete a period vs molar mass of an element')
@@ -155,7 +156,8 @@ for key, values in degree_data.items():
 ##### Graph for degree data ######
 
 # Ordered pairs
-xi = np.array([5] * N + [10] * N + [15] * N + [20] * N + [25] * N + [30] * N + [35] * N + [40] * N + [45] * N)
+xi = np.array([5] * N + [10] * N + [15] * N + [20] * N + [25]
+              * N + [30] * N + [35] * N + [40] * N + [45] * N)
 y = degree_data['5_degrees'] + degree_data['10_degrees'] + \
     degree_data['15_degrees'] + degree_data['20_degrees'] + \
     degree_data['25_degrees'] + degree_data['30_degrees'] + \
@@ -175,11 +177,12 @@ error = [
 # Plot degree data points
 for i in range(5, 46, 5):
     error_index = i // 5 - 1
-    five_degs, = plt.plot([i] * N, degree_data['%d_degrees' % (i,)], 'ro', markersize=4)
+    five_degs, = plt.plot(
+        [i] * N, degree_data['%d_degrees' % (i,)], 'ro', markersize=4)
     plt.errorbar([i] * N, degree_data['%d_degrees' % (i,)],
-        yerr=error[error_index], fmt='|', capsize=3,
-        ecolor='blue'
-    )
+                 yerr=error[error_index], fmt='|', capsize=3,
+                 ecolor='blue'
+                 )
 
 plt.title('Graph of the time to complete a period vs pendulum offset angle')
 plt.xlabel('Angle formed between the pendulm\'s start and rest positions (degrees)')
@@ -237,7 +240,7 @@ slope, intercept, r_value, p_value, std_err = stats.linregress(xi, y)
 x = np.linspace(15, 75)  # span the graph
 y = slope * x + intercept
 plt.plot(x, y, label="Linear regression: y = %fx + %.2f" %
-    (slope, intercept,))
+         (slope, intercept,))
 
 # Standard length error
 error = [
@@ -248,11 +251,11 @@ error = [
 for i in range(20, 71, 10):
     error_index = (i - 10) // 10 - 1
     twenty, = plt.plot([i] * N, length_data['%d_cm' % (i,)],
-                        'ro', markersize=4)
+                       'ro', markersize=4)
     plt.errorbar([i] * N, length_data['%d_cm' % (i,)],
-        yerr=error[error_index], fmt='|', capsize=3,
-        ecolor='red'
-    )
+                 yerr=error[error_index], fmt='|', capsize=3,
+                 ecolor='red'
+                 )
 
 plt.legend(handler_map={lead: HandlerLine2D(numpoints=1)})
 
